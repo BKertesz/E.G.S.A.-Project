@@ -6,10 +6,8 @@ class LoginContainer extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            user:{
                 name:'',
                 password:''
-            }
             
         }
         this.handleFormSubmit = this.handleFormSubmit.bind(this)
@@ -17,13 +15,17 @@ class LoginContainer extends React.Component{
     }
 
     handleFormSubmit(event){
-        console.log(this.state)
-        //props.onLogin(this.state.user)
+        event.preventDefault()
+        // console.log(this.state)
+        const user = {...this.state}
+        // console.log(user)
+        this.props.onLogin(user)
     }
 
     handleChange(event){
-        console.log(event.target.value)
-        //this.setState({user:{[event.target.name]:[event.target.value]}})
+        // console.log(event.target.name)
+        // console.log(event.target.value)
+        this.setState({[event.target.name]: event.target.value})
     }
 
     render(){
@@ -31,7 +33,7 @@ class LoginContainer extends React.Component{
         return(
             <div>
                 This is the login screen
-                <LoginForm />
+                <LoginForm onFormChange={this.handleChange} onFormSubmit={this.handleFormSubmit} />
             </div>
         )
     }

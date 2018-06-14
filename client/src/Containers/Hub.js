@@ -13,7 +13,7 @@ class Hub extends React.Component{
     }
 
     getUserObject(currentUser){
-        this.setState({user:currentUser})
+        this.setState({user:currentUser,userLoggedIn:true})
     }
 
 
