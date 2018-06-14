@@ -20,6 +20,7 @@ class LoginContainer extends React.Component{
         const user = {...this.state}
         // console.log(user)
         this.props.onLogin(user)
+        event.target.reset()
     }
 
     handleChange(event){
