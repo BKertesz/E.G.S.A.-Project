@@ -1,4 +1,4 @@
-# Expandable Game System App ( E.G.S.A. )
+# Expandable Game System App (EGSA)
 ## Introduction
 A front and backend project written in javascript. Serving the purpose of creating a fully customizable RolePlaying experience. The project tries to help with the problems with many known game rule system like D & D and such by automatizing many aspects. But still maintining its free form. And for the best of all its still fully customizable.
 
@@ -56,4 +56,3 @@ An event can spawn an item, character or link a location to an other. But in rea
 - Add data persistance and create Themes
 > Theme is a package where all room assets are stored in
 - Be able to copy Themes between rooms.
-
