@@ -1,5 +1,6 @@
 import React from 'react'
 import LoginForm from '../Components/LoginForm'
+import Header from '../Components/Header'
 
 class LoginContainer extends React.Component{
 
@@ -33,7 +34,7 @@ class LoginContainer extends React.Component{
 
         return(
             <div>
-                This is the login screen
+                <Header title="Login" />
                 <LoginForm onFormChange={this.handleChange} onFormSubmit={this.handleFormSubmit} />
             </div>
         )

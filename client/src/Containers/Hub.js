@@ -1,5 +1,6 @@
 import React from 'react'
 import LoginContainer from './LoginContainer'
+import RoomsContainer from './RoomsContainer';
 
 class Hub extends React.Component{
     constructor(props){
@@ -23,6 +24,7 @@ class Hub extends React.Component{
         return(
             <div>
                 <LoginContainer onLogin={this.getUserObject} isVisible={this.state.userLoggedIn} />
+                <RoomsContainer />
             </div>
         )
     }

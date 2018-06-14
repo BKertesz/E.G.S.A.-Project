@@ -10,7 +10,8 @@ const LoginForm = (props) => {
     }
 
     const form = <form onSubmit={handleFormSubmit}>
-    <h4>Login</h4>
+
+
     <label>Username:</label>
     <input type="text" name='name' onChange={props.onFormChange}/>
 
