@@ -18,11 +18,11 @@ class Hub extends React.Component{
 
 
     render(){
+        
 
         return(
             <div>
-                This is the container for the Hub
-                <LoginContainer onLogin={this.getUserObject} />
+                <LoginContainer onLogin={this.getUserObject} isVisible={this.state.userLoggedIn} />
             </div>
         )
     }

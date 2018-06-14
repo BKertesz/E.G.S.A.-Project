@@ -9,22 +9,23 @@ const LoginForm = (props) => {
         props.onFormSubmit(event)
     }
 
-    return(
-        <form onSubmit={handleFormSubmit}>
-            <h4>Login</h4>
-            <label>Username:</label>
-            <input type="text" name='name' onChange={props.onFormChange}/>
+    const form = <form onSubmit={handleFormSubmit}>
+    <h4>Login</h4>
+    <label>Username:</label>
+    <input type="text" name='name' onChange={props.onFormChange}/>
 
-            <br />
+    <br />
 
-            <label>Password:</label>
-            <input type="password" name="password" onChange={props.onFormChange} />
+    <label>Password:</label>
+    <input type="password" name="password" onChange={props.onFormChange} />
 
-            <br />
+    <br />
 
-            <button type='submit'>Login</button>
-        </form>
-    )
+    <button type='submit'>Login</button>
+</form>
+
+    return !props.isVisible? form : null
+        
 }
 
 export default LoginForm
