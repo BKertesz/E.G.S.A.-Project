@@ -1,5 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header'
+import CreateRoom from '../Components/CreateRoom'
+import Room from '../Components/Room'
 
 class RoomsContainer extends React.Component{
     constructor(props){
@@ -12,6 +14,8 @@ class RoomsContainer extends React.Component{
         return(
             <div>
                 <Header title="Rooms" />
+                <CreateRoom />
+                <Room />
             </div>
         )
     }
