@@ -2,7 +2,7 @@ import React from 'react'
 
 const CreateRoom = (props) => {
 
-    return(<button>Create Room</button>)
+    return(<button onClick={props.onButtonClick}>Create Room</button>)
 }
 
 export default CreateRoom

@@ -24,7 +24,7 @@ class Hub extends React.Component{
         return(
             <div>
                 <LoginContainer onLogin={this.getUserObject} isVisible={this.state.userLoggedIn} />
-                <RoomsContainer />
+                <RoomsContainer user={this.state.user} />
             </div>
         )
     }

@@ -6,16 +6,35 @@ import Room from '../Components/Room'
 class RoomsContainer extends React.Component{
     constructor(props){
         super(props)
-        this.state = {}
+        this.state = {
+            rooms:[]
+        }
+        this.handleCreateRoom = this.handleCreateRoom.bind(this)
     }
 
+    handleCreateRoom(){
+        const newRoom = <Room key={this.state.rooms.length} user={this.props.user} name="Test Room" />
+        // console.log(newRoom)
+        const roomArray = this.state.rooms
+        roomArray.push(newRoom)
+        this.setState({rooms:roomArray})
+    }
+
+    componentDidMount(){
+        // this.handleCreateRoom("Test Room")
+    }
+
+
+
     render(){
+
+
 
         return(
             <div>
                 <Header title="Rooms" />
-                <CreateRoom />
-                <Room />
+                <CreateRoom onButtonClick={this.handleCreateRoom}/>
+                {this.state.rooms[0]}
             </div>
         )
     }
