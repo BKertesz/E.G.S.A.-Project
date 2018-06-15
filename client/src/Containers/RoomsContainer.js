@@ -13,7 +13,7 @@ class RoomsContainer extends React.Component{
     }
 
     handleCreateRoom(){
-        const newRoom = <Room key={this.state.rooms.length} user={this.props.user} name="Test Room" />
+        const newRoom = <Room key={this.state.rooms.length} user={this.props.user} name={"Test Room"} />
         // console.log(newRoom)
         const roomArray = this.state.rooms
         roomArray.push(newRoom)
@@ -22,7 +22,10 @@ class RoomsContainer extends React.Component{
 
     componentDidMount(){
         // this.handleCreateRoom("Test Room")
+        
     }
+
+
 
 
 
@@ -34,7 +37,7 @@ class RoomsContainer extends React.Component{
             <div>
                 <Header title="Rooms" />
                 <CreateRoom onButtonClick={this.handleCreateRoom}/>
-                {this.state.rooms[0]}
+                <ul>{this.state.rooms}</ul>
             </div>
         )
     }
