@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+const command = require('./tools/commands')
 
 // allows cross origin resource sharing
 app.use(function(req, res, next) {
@@ -14,16 +15,9 @@ app.use(function(req, res, next) {
 io.on('connection', function(socket){
     // console.log('This works')
   socket.on('Test Room', (message) => {
-    //   console.log("This works too")
-      if(message.msg[0] == "$"){
-          console.log("Detected a command:",message)
+          // console.log('This executes')
+          console.log(command(message.usr,message.msg))
           io.sockets.emit("Test Room",message)
-      }
-      else{
-          console.log("I got this message:",message)
-        io.sockets.emit("Test Room", message);
-      }
-    
   });
 });
 
