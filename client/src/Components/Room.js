@@ -21,12 +21,12 @@ class Room extends React.Component{
 
 
     addMessage(message){
-        // console.log(message)
-        const messages = this.state.messages
-        // console.log(messages)
-        messages.push(message)
-        const newMessages = messages
-        console.log(newMessages)
+        console.log(message)
+        // const messages = this.state.messages
+        // // // console.log(messages)
+        // messages.push(message)
+        // const newMessages = messages
+        // // console.log(newMessages)
         // this.setState({messages:newMessages})
     }
 

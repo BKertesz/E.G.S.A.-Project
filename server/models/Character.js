@@ -1,9 +1,9 @@
-class Character {
+class Character{
 
-    constructor(){
-
+    constructor(name){
+        this.name = name
     }
 
 }
 
-export default Character
+module.exports = Character

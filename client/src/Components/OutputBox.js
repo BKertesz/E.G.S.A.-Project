@@ -4,7 +4,8 @@ const OutputBox = (props) => {
 
     const messageDisplay = props.messages.map((message,index)=>{
         // console.log(message)
-        return <p key={index}>{message.usr}:{message.msg}</p>
+        // return null
+        return <p key={index}>{message}</p>
     })
 
     return(

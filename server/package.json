@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "express": "^4.16.3",
+    "mongodb": "^3.0.10",
     "nodemon": "^1.17.5",
     "socket.io": "^2.1.1"
   },
