@@ -1,3 +1,5 @@
+
+
 commands = {
     print:{
         desc:"This is a print command",
@@ -8,8 +10,8 @@ commands = {
     },
     exit:{
         desc:"This is an exit command",
-        arg:0,
-        function:"exit()"
+        arg:1,
+        function: Location.createLocation()
     }
 }
 
